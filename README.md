@@ -1,6 +1,8 @@
 # SIH2026
 ## Problem Statement ID: 26175
 ## Problem Statement: DepthWizard - Single-View Height Estimation and 3D Flythrough
+### FAQs
+> Please refers to [Github issue 1](https://github.com/IMG-PROCESS-SAC/SIH-DepthWizard-2026/issues/1) for answers of your questions.
 ### 🗄️ Recommended Dataset: GAMUS
 To train, test, and validate the monocular depth-estimation backbone for this pipeline, the GAMUS Dataset is the recommended open-source foundation. It provides the essential paired data required to translate 2D satellite imagery into accurate depth models.
  * Dataset Name: GAMUS
@@ -13,7 +15,7 @@ To train, test, and validate the monocular depth-estimation backbone for this pi
 **NOTE** -> While GAMUS is recommended, you are free to utilize any open-source dataset containing remote-sensing depth data, provided it supports both relative depth training and metric scale calibration.
 > Dataset Application Strategy:
 > Use this data to overcome the domain gap between natural egocentric imagery (what most foundational models are trained on) and top-down remote sensing imagery. The dataset will be critical for training your model to handle structural variations across urban, sparse, hilly, and forested landscapes.
-> 
+
 ### 📖 Background
 Accurate Digital Elevation Models (DEMs) and Digital Surface Models (DSMs) are fundamental to urban planning, disaster management, and military reconnaissance. Traditional elevation data acquisition methods—such as stereo-imaging pairs, LiDAR, or Interferometric Synthetic Aperture Radar (InSAR)—are often cost-prohibitive, computationally intensive, and dependent on specific sensors.
 Single-view height estimation offers an agile alternative. However, current foundational monocular depth models predict relative depth and struggle with remote sensing applications due to domain gaps and a lack of absolute-scale mapping. Converting this relative depth into metric elevation, and transforming those profiles into interactive 3D flythrough assets, remains the primary challenge.
